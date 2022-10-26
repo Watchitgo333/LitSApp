@@ -57,6 +57,6 @@ This wireframe is a high-fi and was build with Microsoft Visio.
 Previous wireframes were built with Balsamiq and on a whiteboard.
 This wireframe is the most recent and up to date.
 
-<img src="client/src/image/antimusic.jpg" alt="Logo">
+<img src="wireframe\LitSApp Wireframe.png" alt="Wireframe">
 
 
