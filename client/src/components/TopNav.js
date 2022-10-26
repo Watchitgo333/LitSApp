@@ -1,6 +1,6 @@
 import { TopNavigation, TopNavigationAction } from "@ui-kitten/components";
-import BackButton from '../components/BackButton';
-import LightDarkButton from '../components/LightDarkButton';
+import BackButton from './buttons/BackButton';
+import LightDarkButton from "./buttons/LightDarkButton";
 
 export const TopNav = ({navigation}) => {
 

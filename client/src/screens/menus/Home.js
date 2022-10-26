@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { Button, Divider, Layout, TopNavigation } from '@ui-kitten/components';
-import LightDarkButton from '../components/LightDarkButton';
+import LightDarkButton from '../../components/buttons/LightDarkButton';
 
 export const HomeScreen = ({ navigation }) => {
 

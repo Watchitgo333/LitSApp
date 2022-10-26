@@ -1,10 +1,11 @@
 import { Icon, Button } from "@ui-kitten/components"
-import { forward } from "../styles/icons"
+import { forward } from "../../styles/buttons"
 
-const ForwardButton = ({navigation}) => {
+const ForwardButton = ({navigation, screen}) => {
 
-
+    
     const navigateSection = () => {
+        console.log(screen)
         navigation.navigate('SectionChoice');
       }
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import { Divider, Layout, Text, TopNavigationAction } from '@ui-kitten/components';
-import ForwardButton from '../components/ForwardButton';
-import { TopNav } from '../components/TopNav';
-import { marginBody, contentContainer } from '../styles/layout';
+import { Divider, Layout, Text } from '@ui-kitten/components';
+import ForwardButton from '../../components/buttons/ForwardButton';
+import { TopNav } from '../../components/TopNav';
+import { marginBody, contentContainer } from '../../styles/layout';
 
 export const DetailsScreen = ({ navigation }) => {
+
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -21,7 +22,7 @@ export const DetailsScreen = ({ navigation }) => {
           Dapibus ultrices in iaculis nunc sed augue lacus viverra.
         </Text>
         <Divider/>
-        <ForwardButton navigation={navigation} />
+        <ForwardButton navigation={navigation} screen={"Section"} />
       </Layout>
     </SafeAreaView>
   );
