@@ -1,16 +1,17 @@
 import { TopNavigation, TopNavigationAction } from "@ui-kitten/components";
-import BackButton from './buttons/BackButton';
+import HomeButton from './buttons/HomeButton';
 import LightDarkButton from "./buttons/LightDarkButton";
 
 export const TopNav = ({navigation}) => {
 
+  console.log(navigation)
     const navigateBack = () => {
-        navigation.goBack();
+        navigation.popToTop();
       };
     
     
       const BackAction = () => (
-        <TopNavigationAction icon={BackButton} onPress={navigateBack}/>
+        <TopNavigationAction icon={HomeButton} onPress={navigateBack}/>
       );
 
     return(

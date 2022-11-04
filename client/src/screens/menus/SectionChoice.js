@@ -30,16 +30,24 @@ export const ChoiceScreen = ({navigation}) => {
     }
 
     return(
-        <SafeAreaView style={styles.container}>
-            <TopNav navigation={navigation}/>
-            <Divider/>
-            <Layout style={styles.layout}>
-                <Text style={styles.header} category='h1'>Section</Text>
-                <Button style={styles.buttons} onPress={(e, value="God")=>navigateSection(e, value)}>God</Button>
-                <Button style={styles.buttons} onPress={(e, value="Others")=>navigateSection(e, value)}>Others</Button>
-                <Button style={styles.buttons} onPress={(e, value="Do")=>navigateSection(e, value)}>Doing</Button>
-            </Layout>
-        </SafeAreaView>
+        <Layout style={styles.layout}>
+            <Text style={styles.header} category='h1'>Section</Text>
+            <Button style={styles.buttons} onPress={(e, value="God")=>navigateSection(e, value)}>God</Button>
+            <Button style={styles.buttons} onPress={(e, value="Others")=>navigateSection(e, value)}>Others</Button>
+            <Button style={styles.buttons} onPress={(e, value="Do")=>navigateSection(e, value)}>Doing</Button>
+        </Layout>
     )
 } 
+
+//old screen
+// <SafeAreaView style={styles.container}>
+// <TopNav navigation={navigation}/>
+// <Divider/>
+// <Layout style={styles.layout}>
+//     <Text style={styles.header} category='h1'>Section</Text>
+//     <Button style={styles.buttons} onPress={(e, value="God")=>navigateSection(e, value)}>God</Button>
+//     <Button style={styles.buttons} onPress={(e, value="Others")=>navigateSection(e, value)}>Others</Button>
+//     <Button style={styles.buttons} onPress={(e, value="Do")=>navigateSection(e, value)}>Doing</Button>
+// </Layout>
+// </SafeAreaView>
 

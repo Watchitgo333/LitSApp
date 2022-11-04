@@ -6,7 +6,8 @@ import LightDarkButton from '../../components/buttons/LightDarkButton';
 export const HomeScreen = ({ navigation }) => {
 
   const navigateDetails = () => {
-    navigation.navigate('BeginGroupPrayer');
+    // navigation.navigate('BeginGroupPrayer');
+    navigation.navigate('Main')
   };
 
   return (

@@ -1,7 +1,7 @@
 import { Icon, Button } from "@ui-kitten/components"
 import { forward } from "../../styles/buttons"
 
-const ForwardButton = ({navigation, screen}) => {
+const ForwardButton = ({navigation, screen, selectedIndex, setSelectedIndex}) => {
 
     
     const navigateSection = () => {
@@ -14,7 +14,8 @@ const ForwardButton = ({navigation, screen}) => {
       )
 
     return(
-        <Button accessoryRight={ForwardIcon} onPress={navigateSection}>Next</Button>
+        // <Button accessoryRight={ForwardIcon} onPress={navigateSection}>Next</Button>
+        <Button accessoryRight={ForwardIcon} onPress={()=>setSelectedIndex(selectedIndex + 1)}>Next</Button>
         // <Icon onPress={navigateSection} style={forward} name="arrow-forward" />
     )
 }
