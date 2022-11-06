@@ -3,7 +3,7 @@
 // import { ChoiceScreen } from './SectionChoice';
 // import { TopNav } from '../../components/TopNav';
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Divider, Layout, Text } from '@ui-kitten/components';
 import ForwardButton from '../../components/buttons/ForwardButton';
 import { marginBody, contentContainer } from '../../styles/layout';
@@ -14,36 +14,37 @@ import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanima
 
 export const DetailsScreen = ({ navigation, setSelectedIndex, selectedIndex }) => {
 
+  // const [selectedIndex, setSelectedIndex] = useState(0);
+  // console.log(selectedIndex)
+  
   const scale =  useSharedValue(1);
   const savedScale = useSharedValue(1);
-  // const [selectedIndex, setSelectedIndex] = useState(0);
-  console.log()
-  console.log(selectedIndex)
-
+  
   const pinchGesture = Gesture.Pinch()
     .onUpdate((e)=>{
-      if(scale.value <= 2.5){
-        console.log(e.scale)
-        scale.value = savedScale.value * e.scale
-      }
-    })
-    .onEnd(()=>{
-      savedScale.value = scale.value;
-    })
-
+      // if(savedScale.value <= 2.5){
+          console.log(e)
+          scale.value = savedScale.value * e.scale
+        // }
+      })
+      .onEnd(()=>{
+          console.log(scale.value)
+          savedScale.value = scale.value;
+        })
+      
 
     const animatedStyle = useAnimatedStyle(()=>({
       transform: [{ scale: scale.value }]
     }))
     const styles = StyleSheet.create({
       box: {
-        height: '100%',
+        height: '100%'
       },
     });
 
   return (
-    <GestureDetector gesture={pinchGesture}>
-      <Animated.View style={[styles.box, animatedStyle]}>
+    // <GestureDetector gesture={pinchGesture}>
+    //   <Animated.View style={[styles.box, animatedStyle]}>
           <Layout style={contentContainer}>
             <Text category='h1'>Presence</Text>
             <Text style={marginBody} category='p1'>
@@ -58,9 +59,9 @@ export const DetailsScreen = ({ navigation, setSelectedIndex, selectedIndex }) =
             <ForwardButton
               selectedIndex={selectedIndex}
               setSelectedIndex={setSelectedIndex}/>
-      </Layout>
-      </Animated.View>
-    </GestureDetector>
+        </Layout>
+    //   </Animated.View>
+    // </GestureDetector>
   );
 };
 
